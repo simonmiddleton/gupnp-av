@@ -80,6 +80,9 @@ typedef struct {
         void (* _gupnp_reserved4) (void);
 } GUPnPDIDLLiteObjectClass;
 
+xmlDoc *
+gupnp_didl_lite_object_get_xml_doc      (GUPnPDIDLLiteObject *object);
+
 xmlNode *
 gupnp_didl_lite_object_get_xml_node     (GUPnPDIDLLiteObject *object);
 

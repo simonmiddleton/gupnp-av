@@ -1000,6 +1000,23 @@ gupnp_didl_lite_object_get_gupnp_xml_doc (GUPnPDIDLLiteObject *object)
 }
 
 /**
+ * gupnp_didl_lite_object_get_xml_doc:
+ * @object: The #GUPnPDIDLLiteObject
+ *
+ * Get the pointer to the XML document containing this object.
+ *
+ * Returns: (transfer none): The pointer to the XML document containing this
+ * object.
+ **/
+xmlDoc *
+gupnp_didl_lite_object_get_xml_doc (GUPnPDIDLLiteObject *object)
+{
+        g_return_val_if_fail (GUPNP_IS_DIDL_LITE_OBJECT (object), NULL);
+
+        return object->priv->xml_doc->doc;
+}
+
+/**
  * gupnp_didl_lite_object_get_xml_node:
  * @object: The #GUPnPDIDLLiteObject
  *
